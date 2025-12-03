@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Boutique | Pretty in Pastel</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/product-card.js"></script>
+    <script src="components/testimonial-card.js"></script>
+    <script src="components/instagram-card.js"></script>
+</head>
+<body class="font-['Inter'] bg-[#fff9f9] text-[#5a4a42]">
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Section -->
+    <section class="relative h-[90vh] md:h-[80vh] w-full overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#f8e8e8] to-transparent z-10"></div>
+        <img src="http://static.photos/fashion/1200x630/42" alt="Fashion Model" class="w-full h-full object-cover">
+        <div class="absolute inset-0 flex items-center z-20 px-6 md:px-16">
+            <div class="max-w-2xl">
+                <h1 class="font-['Playfair_Display'] text-4xl md:text-6xl font-bold text-[#5a4a42] mb-4">Spring Collection</h1>
+                <p class="text-lg md:text-xl text-[#5a4a42] mb-8">Discover our dreamy pastel pieces designed for every occasion</p>
+                <a href="#shop" class="bg-[#e8b4b8] hover:bg-[#d9a5a9] text-white px-8 py-3 rounded-full font-medium transition-all duration-300 inline-block">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="py-16 px-6 md:px-16">
+        <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold text-center mb-12">Shop by Category</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="#" class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+                <img src="http://static.photos/dresses/640x360/1" alt="Dresses" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold">Dresses</h3>
+                </div>
+            </a>
+            <a href="#" class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+                <img src="http://static.photos/tops/640x360/2" alt="Tops" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold">Tops</h3>
+                </div>
+            </a>
+            <a href="#" class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+                <img src="http://static.photos/bottoms/640x360/3" alt="Bottoms" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold">Bottoms</h3>
+                </div>
+            </a>
+            <a href="#" class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+                <img src="http://static.photos/accessories/640x360/4" alt="Accessories" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold">Accessories</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="shop" class="py-16 px-6 md:px-16 bg-[#fcf2f3]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold">Featured Pieces</h2>
+                <a href="#" class="text-[#e8b4b8] hover:text-[#d9a5a9] flex items-center gap-2">
+                    View All <i data-feather="arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <product-card 
+                    image="http://static.photos/fashion/640x360/10"
+                    title="Lavender Dream Dress"
+                    price="89.99"
+                    old-price="120.00"
+                    category="Dresses"
+                    is-new="true">
+                </product-card>
+                
+                <product-card 
+                    image="http://static.photos/fashion/640x360/11"
+                    title="Blush Silk Blouse"
+                    price="59.99"
+                    category="Tops"
+                    is-sale="true">
+                </product-card>
+                
+                <product-card 
+                    image="http://static.photos/fashion/640x360/12"
+                    title="Pearl Accent Skirt"
+                    price="49.99"
+                    category="Bottoms">
+                </product-card>
+                
+                <product-card 
+                    image="http://static.photos/fashion/640x360/13"
+                    title="Pastel Pearl Set"
+                    price="129.99"
+                    category="Sets"
+                    is-new="true">
+                </product-card>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Banner -->
+    <section class="py-16 px-6 md:px-16">
+        <div class="bg-gradient-to-r from-[#f3e1e1] to-[#e8d4f5] rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-1/2">
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold mb-4">Summer Sale! 30% Off</h2>
+                <p class="text-lg mb-6">Use code <span class="font-bold">BLOSSOM30</span> at checkout. Limited time only!</p>
+                <a href="#" class="bg-[#5a4a42] hover:bg-[#4a3c35] text-white px-8 py-3 rounded-full font-medium transition-all duration-300 inline-block">Shop the Sale</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="http://static.photos/fashion/640x360/20" alt="Summer Sale" class="max-h-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 md:px-16 bg-white">
+        <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold text-center mb-12">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <testimonial-card 
+                name="Sophia L."
+                role="Fashion Blogger"
+                text="The quality of the fabrics is exceptional! I've received so many compliments on my Blossom dress."
+                rating="5">
+            </testimonial-card>
+            
+            <testimonial-card 
+                name="Emma R."
+                role="Stylist"
+                text="Their pastel collection is perfect for spring photoshoots. The pieces photograph beautifully."
+                rating="4">
+            </testimonial-card>
+            
+            <testimonial-card 
+                name="Olivia T."
+                role="Loyal Customer"
+                text="I love how feminine and romantic all their pieces are. The customer service is outstanding too!"
+                rating="5">
+            </testimonial-card>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="py-16 px-6 md:px-16 bg-[#fcf2f3]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold">#BlossomBoutique</h2>
+                <a href="#" class="text-[#e8b4b8] hover:text-[#d9a5a9] flex items-center gap-2">
+                    Follow Us <i data-feather="instagram"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <instagram-card 
+                    image="http://static.photos/fashion/320x240/30"
+                    likes="2.4k"
+                    comments="183">
+                </instagram-card>
+                
+                <instagram-card 
+                    image="http://static.photos/fashion/320x240/31"
+                    likes="1.8k"
+                    comments="97">
+                </instagram-card>
+                
+                <instagram-card 
+                    image="http://static.photos/fashion/320x240/32"
+                    likes="3.1k"
+                    comments="245">
+                </instagram-card>
+                
+                <instagram-card 
+                    image="http://static.photos/fashion/320x240/33"
+                    likes="2.7k"
+                    comments="156">
+                </instagram-card>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-6 md:px-16">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
+            <div class="text-center mb-8">
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl font-bold mb-4">Stay in Bloom</h2>
+                <p class="text-lg">Subscribe to our newsletter for exclusive offers, styling tips, and early access to new collections.</p>
+            </div>
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 border border-[#e8b4b8] rounded-full focus:outline-none focus:ring-2 focus:ring-[#e8b4b8]">
+                    <button type="submit" class="bg-[#e8b4b8] hover:bg-[#d9a5a9] text-white px-6 py-3 rounded-full font-medium transition-all duration-300">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Cart Modal (hidden by default) -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white rounded-xl w-full max-w-md max-h-[80vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-['Playfair_Display'] text-2xl font-bold">Your Cart (2)</h3>
+                    <button onclick="closeCart()" class="text-gray-500 hover:text-gray-700">
+                        <i data-feather="x"></i>
+                    </button>
+                </div>
+                
+                <div class="space-y-4 mb-6">
+                    <div class="flex gap-4 border-b pb-4">
+                        <img src="http://static.photos/fashion/200x200/10" alt="Product" class="w-20 h-20 object-cover rounded-lg">
+                        <div class="flex-1">
+                            <h4 class="font-medium">Lavender Dream Dress</h4>
+                            <p class="text-sm text-gray-500">Size: S</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <div class="flex items-center gap-2">
+                                    <button class="w-6 h-6 flex items-center justify-center border rounded-full">-</button>
+                                    <span>1</span>
+                                    <button class="w-6 h-6 flex items-center justify-center border rounded-full">+</button>
+                                </div>
+                                <span class="font-medium">$89.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <img src="http://static.photos/fashion/200x200/11" alt="Product" class="w-20 h-20 object-cover rounded-lg">
+                        <div class="flex-1">
+                            <h4 class="font-medium">Blush Silk Blouse</h4>
+                            <p class="text-sm text-gray-500">Size: M</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <div class="flex items-center gap-2">
+                                    <button class="w-6 h-6 flex items-center justify-center border rounded-full">-</button>
+                                    <span>1</span>
+                                    <button class="w-6 h-6 flex items-center justify-center border rounded-full">+</button>
+                                </div>
+                                <span class="font-medium">$59.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t pt-4 mb-6">
+                    <div class="flex justify-between mb-2">
+                        <span>Subtotal</span>
+                        <span>$149.98</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="flex justify-between font-bold text-lg">
+                        <span>Total</span>
+                        <span>$149.98</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="block w-full bg-[#e8b4b8] hover:bg-[#d9a5a9] text-white text-center py-3 rounded-full font-medium transition-all duration-300 mb-4">Checkout</a>
+                <a href="#" class="block w-full border border-[#e8b4b8] text-[#e8b4b8] hover:bg-[#fcf2f3] text-center py-3 rounded-full font-medium transition-all duration-300">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        
+        // Cart functionality
+        let cartCount = 0;
+        const cartItems = [];
+        
+        function openCart() {
+            document.getElementById('cartModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeCart() {
+            document.getElementById('cartModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        function addToCart(product) {
+            cartCount++;
+            document.getElementById('cartCount').textContent = cartCount;
+            cartItems.push(product);
+            openCart();
+        }
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
